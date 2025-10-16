@@ -1,13 +1,29 @@
-import React from 'react'
-import TaskForm from './component/TaskForm'
-export default function App() {
-  return (
-    <div>
-        <h1>Task Focus</h1>
-        <p>A Friendly Task Manager</p>
-        <TaskForm />
-        <button>Clear All Tasks</button>
 
+import Taskform from "./component/TaskForm";
+import TaskList from "./component/TaskList";
+import Progresstracker from "./component/ProgressTracker";
+import { useEffect, useState } from "react";
+
+export default function App() {
+  const [tasks, setTasks] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem
+    ("tasks", JSON.stringify(tasks))
+  });
+
+  const addTask = (task) => {
+    setTasks([...tasks,task]);
+  }
+
+  return(
+    <div>
+      <h1>Task Focus</h1>
+      <p>Our friendly TaskManager</p>
+      <Taskform addTask = {addTask}/>
+      <TaskList />
+      <Progresstracker />
+      <button>Clear all tasks</button>
     </div>
   )
 }
