@@ -31,7 +31,7 @@ export default function App() {
   return(
     <div className="App">
       <header>
-      <h1 className="title">Task Focus</h1>
+      <h1 className="title">Prioritize Pro</h1>
       <p className="tagline"><b>Our friendly TaskManager</b></p>
       <Taskform addTask = {addTask}/>
       <TaskList 
