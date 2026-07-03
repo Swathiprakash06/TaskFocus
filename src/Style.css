@@ -268,3 +268,86 @@ select {
 .task-priority-low {
     border-left: 5px solid #5cb85c; /* A green color */
 }
+.overdue {
+  border-color: #d32f2f;
+  background-color: #fff1f0;
+}
+
+.due-info {
+  display: block;
+  margin-top: 6px;
+  color: #4b5563;
+  font-size: 0.85rem;
+}
+
+/* Centered toast with overlay (matches header colors) */
+.toast-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.12);
+  z-index: 1000;
+}
+
+.toast-notification {
+  background: #f8d6d5; /* header background */
+  color: #b03030; /* header text color */
+  border: 2px solid #b03030;
+  padding: 18px 20px;
+  border-radius: 12px;
+  box-shadow: 0 14px 40px rgba(176, 48, 48, 0.12);
+  max-width: 520px;
+  width: min(92%, 520px);
+  font-weight: 700;
+}
+
+.notification-settings {
+  margin: 16px 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.notification-settings label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.notice-text {
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.toast-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.toast-actions button {
+  border: 1px solid #b03030;
+  color: #b03030;
+  background: transparent;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.toast-actions .snooze-button {
+  background: #b03030;
+  color: white;
+  border-color: #8a2626;
+}
+
+.toast-actions button:hover {
+  opacity: 0.95;
+}
+
